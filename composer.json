@@ -1,0 +1,38 @@
+{
+    "name": "clivern/rabbitmq-hole",
+    "type": "library",
+    "description": "RabbitMQ HTTP API Client In PHP.",
+    "keywords": ["clivern", "rabbitmq-hole"],
+    "license": "MIT",
+    "homepage": "https://github.com/clivern/rabbitmq-hole",
+    "authors": [
+        {
+            "name": "Clivern",
+            "email": "hello@clivern.com",
+            "homepage": "http://clivern.com",
+            "role": "Maintainer"
+        }
+    ],
+    "require": {
+        "php":">=7.4",
+        "guzzlehttp/guzzle": "^7.4"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "3.6.1",
+        "phpunit/phpunit": "9.5.10",
+        "clivern/phpcs": "1.0.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Clivern\\RabbitMQHole\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Clivern\\RabbitMQHole\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}
