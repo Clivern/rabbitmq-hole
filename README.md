@@ -33,8 +33,6 @@ This command requires you to have `composer` installed globally.
 To use the generic `API` client.
 
 ```php
-<?php
-
 include_once __DIR__ . "/vendor/autoload.php";
 
 use Clivern\RabbitMQHole\Client;
@@ -47,7 +45,6 @@ $client = new Client("http://rabbitmq.com:15672", "guest", "guest");
 To use the `Queue` client.
 
 ```php
-<?php
 $client = new Client("http://rabbitmq.com:15672", "guest", "guest");
 $queues = new Queues($client);
 

@@ -10,9 +10,9 @@ declare(strict_types=1);
 namespace Clivern\RabbitMQHole;
 
 /**
- * Vhost Class.
+ * Bindings Class.
  */
-class Vhost
+class Bindings
 {
     /**
      * @var Client
