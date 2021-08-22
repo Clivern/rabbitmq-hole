@@ -27,7 +27,7 @@ class Client
     /**
      * @var GuzzleClient
      */
-    private $client;
+    private $httpClient;
 
     /**
      * @var string
@@ -46,14 +46,16 @@ class Client
 
     /**
      * Class Constructor.
+     *
+     * @param mixed $httpClient
      */
-    public function __construct(string $baseURL, string $username, string $password)
+    public function __construct(string $baseURL, string $username, string $password, $httpClient = null)
     {
         $this->baseURL  = $baseURL;
         $this->username = $username;
         $this->password = $password;
 
-        $this->client = new GuzzleClient();
+        $this->httpClient = $httpClient ?? new GuzzleClient();
     }
 
     /**
@@ -66,7 +68,7 @@ class Client
             ['auth' => [$this->username, $this->password]]
         );
 
-        return $this->client->request(
+        return $this->httpClient->request(
             $method,
             sprintf("%s/%s", trim($this->baseURL, '/'), trim($uri, '/')),
             $options
