@@ -80,7 +80,7 @@ class Client
      */
     public function get(string $uri, array $options = []): ResponseInterface
     {
-        return $this->Request(self::GET_METHOD, $uri, $options);
+        return $this->request(self::GET_METHOD, $uri, $options);
     }
 
     /**
@@ -88,7 +88,7 @@ class Client
      */
     public function post(string $uri, array $options = []): ResponseInterface
     {
-        return $this->Request(self::POST_METHOD, $uri, $options);
+        return $this->request(self::POST_METHOD, $uri, $options);
     }
 
     /**
@@ -96,7 +96,7 @@ class Client
      */
     public function put(string $uri, array $options = []): ResponseInterface
     {
-        return $this->Request(self::PUT_METHOD, $uri, $options);
+        return $this->request(self::PUT_METHOD, $uri, $options);
     }
 
     /**
@@ -104,6 +104,6 @@ class Client
      */
     public function delete(string $uri, array $options = []): ResponseInterface
     {
-        return $this->Request(self::DELETE_METHOD, $uri, $options);
+        return $this->request(self::DELETE_METHOD, $uri, $options);
     }
 }
